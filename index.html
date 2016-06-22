@@ -1,10 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Random'ish Word Generator</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-		<script>
+    <title>Narrow Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+
+    <script>
 			function myFunction()
 			{
 				var things = ['Rock', 'Paper', 'Scissor'];
@@ -13,20 +26,38 @@
 			}
 		</script>
 
-        <style type="text/css">
-            body {background:#222;color:#EEE;font:1.6em Arial,Verdana,Sans-Serif;margin:0;padding:20px;}
-            span {padding:15px 0; display:block; font: 1.5em 'Courier New',Courier,monospace}
-            h1{margin:0;padding:10px 0;}
-        </style>
-</head>
-<body>
+  </head>
 
-    <!-- <body content> -->
+  <body>
 
-    <h1>Random'ish Word generator!</h1>
-		<button type="button" onclick="myFunction()"> Click me</button>
-        <span id="word"></span>
-    </form>
-    <!-- </body content> -->
-</body>
+    <div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">Phonics Practice</h3>
+      </div>
+
+      <div class="jumbotron">
+        <span id="word" class="h1"></span>
+        <p><a class="btn btn-lg btn-success" role="button" onclick="myFunction()">Next...</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Umm No copyright :) </p>
+      </footer>
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
