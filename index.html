@@ -18,12 +18,19 @@
     <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
 
     <script>
-			function nextWord()
-			{
-				var things = ['Rock', 'Paper', 'Scissor'];
-				var thing = things[Math.floor(Math.random()*things.length)];
-				document.getElementById("word").textContent = thing;
-			}
+
+      function fetchRandomElement(words)
+      {
+        return words[Math.floor(Math.random()*words.length)];
+      }
+
+      function nextWord()
+      {
+        var words = ['h ouse', 'm ouse', 'l ouse'];
+        var currentWord = fetchRandomElement(words);
+        document.getElementById("word_pieces").textContent = currentWord;
+        document.getElementById("word").textContent = currentWord.replace(/ /g,'');
+      }
 		</script>
 
   </head>
@@ -36,7 +43,10 @@
       </div>
 
       <div class="jumbotron">
+        <span id="word_pieces" class="h1"></span>
+        <p></p>
         <span id="word" class="h1"></span>
+        <p></p>
         <p></p>
         <p><a class="btn btn-lg btn-success" role="button" onclick="nextWord()">Next</a></p>
       </div>
