@@ -18,7 +18,7 @@
     <link href="assets/css/jumbotron-narrow.css" rel="stylesheet">
 
     <script>
-			function myFunction()
+			function nextWord()
 			{
 				var things = ['Rock', 'Paper', 'Scissor'];
 				var thing = things[Math.floor(Math.random()*things.length)];
@@ -38,7 +38,7 @@
       <div class="jumbotron">
         <span id="word" class="h1"></span>
         <p></p>
-        <p><a class="btn btn-lg btn-success" role="button" onclick="myFunction()">Next...</a></p>
+        <p><a class="btn btn-lg btn-success" role="button" onclick="nextWord()">Next</a></p>
       </div>
 
       <div class="row marketing">
@@ -57,8 +57,5 @@
         <p>&copy; Umm No copyright :) </p>
       </footer>
     </div> <!-- /container -->
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
