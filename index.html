@@ -19,6 +19,15 @@
 
     <script>
 
+      var wordFamilyIndex = 1;
+
+      var wordFamilies = [
+        ['up', 'p up', 'y up', 'c up', 's up'],
+        ['h ouse', 'm ouse', 'l ouse']
+      ];
+
+      var words = shuffle(wordFamilies[wordFamilyIndex]);
+
       function fetchRandomElement(words)
       {
         return words[Math.floor(Math.random()*words.length)];
@@ -26,10 +35,22 @@
 
       function nextWord()
       {
-        var words = ['h ouse', 'm ouse', 'l ouse'];
         var currentWord = fetchRandomElement(words);
         document.getElementById("word_pieces").textContent = currentWord;
         document.getElementById("word").textContent = currentWord.replace(/ /g,'');
+      }
+
+      function shuffle (array) {
+        var i = 0
+          , j = 0
+          , temp = null
+
+        for (i = array.length - 1; i > 0; i -= 1) {
+          j = Math.floor(Math.random() * (i + 1))
+          temp = array[i]
+          array[i] = array[j]
+          array[j] = temp
+        }
       }
 		</script>
 
