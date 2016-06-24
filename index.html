@@ -28,7 +28,16 @@
         "ay" : ["d ay", "b ay", "h ay", "s ay", "y ay", "p ay", "l ay", "m ay", "cl ay", "gr ay", "pl ay", "o k ay", "sp r ay", "x- ray", "st ay", "a w ay"],
         "ouse" : ['h ouse', 'm ouse', 'l ouse', "bl ouse"],
         "e" : ["h e", "m e", "b e", "sh e"],
-        "ight" : ["n ight", "l ight", "f ight", "m ight", "r ight", "s ight"]
+        "ight" : ["n ight", "l ight", "f ight", "m ight", "r ight", "s ight"],
+        "all" : ["all", "h all", "c all", "t all", "b all", "w all", "f all", "sm all"],
+        "im" : ["h im", "j im", "t im", "d im", "sk im", "k im", "r im", "br im", "tr im", "sw im", "gr im", "pr im", "sh im", "sl im", "wh im"],
+        "ee" : ["b ee", "fl ee", "kn ee", "p ee", "th r ee", "tr ee"],
+        "ed" : ["r ed", "b ed", "ed", "t ed", "fl ed", "fr ed", "sh r ed", "sl ed", "sh ed"],
+        "at" : ["c at", "at", "p at", "th at", "s at", "b at", "ch at", "f at", "fl at", "gn at", "h at", "m at", "r at"],
+        "ish" : ["f ish", "w ish", "sw ish", "d ish", "s qu ish"],
+        "erry" : ["v ery", "ch erry", "f erry", "b erry", "g erry", "j erry", "k erry", "m erry", "sh erry"],
+        "ad" : ["ad", "add", "b ad", "br ad", "ch ad", "d ad", "f ad", "gl ad", "gr ad", "l ad", "p ad", "s ad", "m ad"]
+
       };
 
       setup("up")
@@ -83,17 +92,24 @@
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4>Word Families</h4>
+          <h4>Simple Word Families</h4>
           <p><a class="btn" role="button" onclick="setup('e');nextWord()">e</a></p>
           <p><a class="btn" role="button" onclick="setup('up');nextWord()">up</a></p>
+          <p><a class="btn" role="button" onclick="setup('im');nextWord()">im</a></p>
+          <p><a class="btn" role="button" onclick="setup('ad');nextWord()">ad</a></p>
+          <p><a class="btn" role="button" onclick="setup('ee');nextWord()">ee</a></p>
+          <p><a class="btn" role="button" onclick="setup('ed');nextWord()">ed</a></p>
+          <p><a class="btn" role="button" onclick="setup('all');nextWord()">all</a></p>
           <p><a class="btn" role="button" onclick="setup('ay');nextWord()">ay</a></p>
-          <p><a class="btn" role="button" onclick="setup('ight');nextWord()">ight</a></p>
-          <p><a class="btn" role="button" onclick="setup('ouse');nextWord()">ouse</a></p>
+          <p><a class="btn" role="button" onclick="setup('at');nextWord()">at</a></p>
+          <p><a class="btn" role="button" onclick="setup('ish');nextWord()">ish</a></p>
         </div>
 
         <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+          <h4>Complex Word Famlies</h4>
+          <p><a class="btn" role="button" onclick="setup('erry');nextWord()">erry</a></p>
+          <p><a class="btn" role="button" onclick="setup('ight');nextWord()">ight</a></p>
+          <p><a class="btn" role="button" onclick="setup('ouse');nextWord()">ouse</a></p>
         </div>
       </div>
 
