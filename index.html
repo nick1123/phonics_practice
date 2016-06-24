@@ -19,37 +19,34 @@
 
     <script>
 
-      var currentWordFamily = "Up"
+      var words;
 
       var wordFamilies = {
         "Up" : ['up', 'p up', 'y up', 'c up', 's up'],
         "Ouse" : ['h ouse', 'm ouse', 'l ouse', "bl ouse"]
       };
 
-      var words = wordFamilies[currentWordFamily];
+      setup("Up");
+      nextWord();
 
-      function fetchRandomElement(words)
+      function setup(wordFamily)
       {
-        return words[Math.floor(Math.random()*words.length)];
+        words = wordFamilies[wordFamily];
+        wordIndex = 0;
       }
 
       function nextWord()
       {
-        var currentWord = fetchRandomElement(words);
-        document.getElementById("word_pieces").textContent = currentWord;
-        document.getElementById("word").textContent = currentWord.replace(/ /g,'');
-      }
-
-      function shuffle (array) {
-        var i = 0
-          , j = 0
-          , temp = null
-
-        for (i = array.length - 1; i > 0; i -= 1) {
-          j = Math.floor(Math.random() * (i + 1))
-          temp = array[i]
-          array[i] = array[j]
-          array[j] = temp
+        if(wordIndex >= words.length)
+        {
+          document.getElementById("word_pieces").textContent = '';
+          document.getElementById("word").textContent = "All Done!";
+        }
+        else {
+          var currentWord = words[wordIndex];
+          document.getElementById("word_pieces").textContent = currentWord;
+          document.getElementById("word").textContent = currentWord.replace(/ /g,'');
+          wordIndex++;
         }
       }
 		</script>
