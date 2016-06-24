@@ -20,27 +20,39 @@
     <script>
 
       var words;
+      var allDone;
+      var currentWordFamily;
 
       var wordFamilies = {
-        "Up" : ['up', 'p up', 'y up', 'c up', 's up'],
-        "Ouse" : ['h ouse', 'm ouse', 'l ouse', "bl ouse"]
+        "up" : ['up', 'p up', 'y up', 'c up', 's up'],
+        "ay" : ["d ay", "b ay", "h ay", "s ay", "y ay", "p ay", "l ay", "m ay", "cl ay", "gr ay", "pl ay", "o k ay", "sp r ay", "x- ray", "st ay", "a w ay"],
+        "ouse" : ['h ouse', 'm ouse', 'l ouse', "bl ouse"],
+        "e" : ["h e", "m e", "b e", "sh e"],
+        "ight" : ["n ight", "l ight", "f ight", "m ight", "r ight", "s ight"]
       };
 
-      setup("Up");
-      nextWord();
+      setup("up")
 
       function setup(wordFamily)
       {
-        words = wordFamilies[wordFamily];
+        currentWordFamily = wordFamily
+        words = wordFamilies[currentWordFamily];
         wordIndex = 0;
+        allDone = false;
       }
 
       function nextWord()
       {
+        if(allDone)
+        {
+          setup(currentWordFamily);
+        }
+
         if(wordIndex >= words.length)
         {
           document.getElementById("word_pieces").textContent = '';
           document.getElementById("word").textContent = "All Done!";
+          allDone = true;
         }
         else {
           var currentWord = words[wordIndex];
@@ -71,8 +83,12 @@
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+          <h4>Word Families</h4>
+          <p><a class="btn" role="button" onclick="setup('e');nextWord()">e</a></p>
+          <p><a class="btn" role="button" onclick="setup('up');nextWord()">up</a></p>
+          <p><a class="btn" role="button" onclick="setup('ay');nextWord()">ay</a></p>
+          <p><a class="btn" role="button" onclick="setup('ight');nextWord()">ight</a></p>
+          <p><a class="btn" role="button" onclick="setup('ouse');nextWord()">ouse</a></p>
         </div>
 
         <div class="col-lg-6">
