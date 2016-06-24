@@ -19,14 +19,14 @@
 
     <script>
 
-      var wordFamilyIndex = 1;
+      var currentWordFamily = "Up"
 
-      var wordFamilies = [
-        ['up', 'p up', 'y up', 'c up', 's up'],
-        ['h ouse', 'm ouse', 'l ouse']
-      ];
+      var wordFamilies = {
+        "Up" : ['up', 'p up', 'y up', 'c up', 's up'],
+        "Ouse" : ['h ouse', 'm ouse', 'l ouse', "bl ouse"]
+      };
 
-      var words = shuffle(wordFamilies[wordFamilyIndex]);
+      var words = wordFamilies[currentWordFamily];
 
       function fetchRandomElement(words)
       {
