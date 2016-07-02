@@ -36,7 +36,12 @@
         "at" : ["c at", "at", "p at", "th at", "s at", "b at", "ch at", "f at", "fl at", "gn at", "h at", "m at", "r at"],
         "ish" : ["f ish", "w ish", "sw ish", "d ish", "s qu ish"],
         "erry" : ["v ery", "ch erry", "f erry", "b erry", "g erry", "j erry", "k erry", "m erry", "sh erry"],
-        "ad" : ["ad", "add", "b ad", "br ad", "ch ad", "d ad", "f ad", "gl ad", "gr ad", "l ad", "p ad", "s ad", "m ad"]
+        "ad" : ["ad", "add", "b ad", "br ad", "ch ad", "d ad", "f ad", "gl ad", "gr ad", "l ad", "p ad", "s ad", "m ad", "t ad", "r ad"],
+        "is" : ["is", "h is"],
+        "in" : ["in", "b in", "ch in", "f in", "t in", "k in", "p in", "w in", "sp in", "th in", "qu in", "v in"],
+        "on" : ["on", "d on", "b on", "c on", "v on", "j on", "r on"],
+        "and" : ["and", "h and", "l and", "br and", "bl and", "s and", "gl and", "gr and", "st and"],
+        "it" : ["it", "s it", "h it", "f it", "b it", "m itt", "gr it", "k it", "kn it", "l it", "p it", "qu it", "sp l it", "w it", "sp it"],
 
       };
 
@@ -94,11 +99,11 @@
         <div class="col-lg-6">
           <h4>Level 1</h4>
           <p>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('is');nextWord()">is</button>
             <button type="button" class="btn btn-lg btn-primary" onclick="setup('e');nextWord()">e</button>
             <button type="button" class="btn btn-lg btn-primary" onclick="setup('up');nextWord()">up</button>
             <button type="button" class="btn btn-lg btn-primary" onclick="setup('im');nextWord()">im</button>
             <button type="button" class="btn btn-lg btn-primary" onclick="setup('ad');nextWord()">ad</button>
-            <button type="button" class="btn btn-lg btn-primary" onclick="setup('ee');nextWord()">ee</button>
           </p>
 
 
@@ -112,6 +117,8 @@
 
           <h4>Level 3</h4>
           <p>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('in');nextWord()">in</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('ee');nextWord()">ee</button>
             <button type="button" class="btn btn-lg btn-primary" onclick="setup('erry');nextWord()">erry</button>
             <button type="button" class="btn btn-lg btn-primary" onclick="setup('ight');nextWord()">ight</button>
             <button type="button" class="btn btn-lg btn-primary" onclick="setup('ouse');nextWord()">ouse</button>
@@ -130,6 +137,9 @@
         <div class="col-lg-6">
           <h4>Level 4</h4>
           <p>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('on');nextWord()">on</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('and');nextWord()">and</button>
+            <button type="button" class="btn btn-lg btn-primary" onclick="setup('it');nextWord()">it</button>
           </p>
 
           <h4>Level 5</h4>
